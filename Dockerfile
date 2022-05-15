@@ -2,6 +2,7 @@ FROM node:10 as contracts
 
 WORKDIR /contracts
 
+RUN git clone git@github.com:poanetwork/tokenbridge-contracts.git contracts
 COPY package.json .
 COPY package-lock.json .
 RUN npm install --only=prod
